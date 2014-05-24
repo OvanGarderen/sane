@@ -1,0 +1,2 @@
+(print  "libs/libio.so" printhandler (@args) (:any) 0)
+(input  "libs/libio.so" inputhandler (prompt) (:string) 0)

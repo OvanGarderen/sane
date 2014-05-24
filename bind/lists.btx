@@ -1,0 +1,4 @@
+(list  "libs/liblists.so" listhandler (@args) () 0)
+(head  "libs/liblists.so" headhandler (ls) (:list) 0)
+(tail  "libs/liblists.so" tailhandler (ls) (:list) 0)
+(empty "libs/liblists.so" emptyhandler (ls) (:list) 0)

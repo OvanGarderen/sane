@@ -1,0 +1,5 @@
+(+ "libs/libarithmatic.so" addhandler (a b) (:int :int) 0)
+(- "libs/libarithmatic.so" subhandler (a b) (:int :int) 0)
+(* "libs/libarithmatic.so" multhandler (a b) (:int :int) 0)
+(/ "libs/libarithmatic.so" divhandler (a b) (:int :int) 0)
+(% "libs/libarithmatic.so" modhandler (a b) (:int :int) 0)

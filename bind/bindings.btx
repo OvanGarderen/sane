@@ -1,0 +1,3 @@
+;;(funcname filefrom nameinfile argspec typespec ismacro)
+
+(lel "libs/liblel.so" lelhandler () () 0)

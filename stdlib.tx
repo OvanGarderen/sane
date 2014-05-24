@@ -1,0 +1,25 @@
+(extern all from bind/arithmatic)
+(extern all from bind/lists)
+(extern all from bind/io)
+
+(def curry (f @args)
+     (func (@rem)
+	   (f @args @rem)))
+
+(def chain (f g)
+     (func (@args)
+	   (f (g @args))))
+
+;; list functionality
+(def concat (la lb) (list @la @lb)) 
+
+(def map (f ls) (if (empty ls) then '() else
+		    (concat
+		     (list (f (head ls)))
+		     (map f (tail ls)))))
+
+(def fold (f init ls) (if (empty ls) then init else
+			  (fold f (f init (head ls)) (tail ls))))
+(def filter (f ls) (fold (func (res x) (if (f x)
+					   then (concat res (list x))
+					   else res)) '() ls))
